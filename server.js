@@ -10,6 +10,7 @@ app.use(express.json())
 connectDB()
 
 app.use('/',require('./router/root'))
+app.use('/agent',require('./router/agentRoute'))
 
 mongoose.connection.once('open',()=>{
     console.log('mongodb is connected')
